@@ -1,6 +1,51 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.embellishments = exports.sleeveLengths = exports.designTypes = exports.soleMaterials = exports.presenceLaces = exports.closureTypes = exports.hoodTypes = exports.Fits = exports.pocketCounts = exports.materials = exports.colors = exports.sizes = exports.brands = void 0;
+exports.embellishments = exports.sleeveLengths = exports.designTypes = exports.soleMaterials = exports.presencesLaces = exports.closureTypes = exports.hoodTypes = exports.fits = exports.pocketCounts = exports.materials = exports.colors = exports.sizes = exports.brands = exports.genders = exports.priceListInEuro = exports.allClothesNames = exports.multipliersList = exports.currencies = void 0;
+var currencies;
+(function (currencies) {
+    currencies["DOLLAR"] = "$";
+    currencies["EURO"] = "\u20AC";
+    currencies["RUBBLE"] = "\u20BD";
+    currencies["UNDEFINED"] = "Undefined";
+})(currencies || (exports.currencies = currencies = {}));
+exports.multipliersList = {
+    [currencies.DOLLAR]: 1.1,
+    [currencies.RUBBLE]: 90,
+    [currencies.EURO]: 1,
+    [currencies.UNDEFINED]: 0
+};
+var allClothesNames;
+(function (allClothesNames) {
+    allClothesNames["KINGVAMPPANTS"] = "King Vamp Pants";
+    allClothesNames["PINKPYROPANTS"] = "Pink Pyro Pants";
+    allClothesNames["MEHPANTS"] = "Meh Pants";
+    allClothesNames["BENOJACKET"] = "Beno Jacket";
+    allClothesNames["CLASSICJACKET"] = "Classic Jacket";
+    allClothesNames["BREATHJACKET"] = "Breath Jacket";
+    allClothesNames["MARTENSBOOTS"] = "Martens Boots";
+    allClothesNames["MONKTSHIRT"] = "Monk T-shirt";
+    allClothesNames["PUNKHOODIE"] = "Punk Hoodie";
+    allClothesNames["UNDEFINED"] = "Undefined";
+})(allClothesNames || (exports.allClothesNames = allClothesNames = {}));
+;
+exports.priceListInEuro = {
+    [allClothesNames.KINGVAMPPANTS]: 1257,
+    [allClothesNames.PINKPYROPANTS]: 630,
+    [allClothesNames.MEHPANTS]: 790,
+    [allClothesNames.BENOJACKET]: 3450,
+    [allClothesNames.CLASSICJACKET]: 4200,
+    [allClothesNames.BREATHJACKET]: 3200,
+    [allClothesNames.MARTENSBOOTS]: 400,
+    [allClothesNames.MONKTSHIRT]: 200,
+    [allClothesNames.PUNKHOODIE]: 560,
+    [allClothesNames.UNDEFINED]: 0,
+};
+var genders;
+(function (genders) {
+    genders["MEN"] = "Men";
+    genders["WOMEN"] = "Women";
+    genders["UNDEFINED"] = "Undefined";
+})(genders || (exports.genders = genders = {}));
 var brands;
 (function (brands) {
     brands["RICKOWENS"] = "Rick Owens";
@@ -40,14 +85,14 @@ var pocketCounts;
     pocketCounts["FIVE"] = "5,";
     pocketCounts["UNDEFINED"] = "Undefined";
 })(pocketCounts || (exports.pocketCounts = pocketCounts = {}));
-var Fits;
-(function (Fits) {
-    Fits["RELAXED"] = "Relaxed";
-    Fits["SLIM"] = "Slim";
-    Fits["OVERSIZE"] = "Oversize";
-    Fits["NORMAL"] = "Normal";
-    Fits["UNDEFINED"] = "Undefined";
-})(Fits || (exports.Fits = Fits = {}));
+var fits;
+(function (fits) {
+    fits["RELAXED"] = "Relaxed";
+    fits["SLIM"] = "Slim";
+    fits["OVERSIZE"] = "Oversize";
+    fits["NORMAL"] = "Normal";
+    fits["UNDEFINED"] = "Undefined";
+})(fits || (exports.fits = fits = {}));
 var hoodTypes;
 (function (hoodTypes) {
     hoodTypes["ELONGATED"] = "Elongated";
@@ -60,12 +105,12 @@ var closureTypes;
     closureTypes["WITHOUTCLASP"] = "Withou Clasp";
     closureTypes["UNDEFINED"] = "Undefined";
 })(closureTypes || (exports.closureTypes = closureTypes = {}));
-var presenceLaces;
-(function (presenceLaces) {
-    presenceLaces["YES"] = "Yes";
-    presenceLaces["NO"] = "No";
-    presenceLaces["UNDEFINED"] = "Undefined";
-})(presenceLaces || (exports.presenceLaces = presenceLaces = {}));
+var presencesLaces;
+(function (presencesLaces) {
+    presencesLaces["YES"] = "Yes";
+    presencesLaces["NO"] = "No";
+    presencesLaces["UNDEFINED"] = "Undefined";
+})(presencesLaces || (exports.presencesLaces = presencesLaces = {}));
 var soleMaterials;
 (function (soleMaterials) {
     soleMaterials["RUBBER"] = "Rubber";

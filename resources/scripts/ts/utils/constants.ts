@@ -1,3 +1,55 @@
+
+
+export enum currencies {
+    DOLLAR = "$",
+    EURO = "€",
+    RUBBLE = "₽",
+    UNDEFINED = "Undefined"
+}
+
+type Multipliers = number;
+
+export const multipliersList: Record<currencies,Multipliers> = {
+    [currencies.DOLLAR]: 1.1,
+    [currencies.RUBBLE]: 90,
+    [currencies.EURO]: 1,
+    [currencies.UNDEFINED]: 0
+}
+
+export enum allClothesNames  {
+    KINGVAMPPANTS = "King Vamp Pants",
+    PINKPYROPANTS = "Pink Pyro Pants",
+    MEHPANTS = "Meh Pants",
+    BENOJACKET = "Beno Jacket",
+    CLASSICJACKET = "Classic Jacket",
+    BREATHJACKET = "Breath Jacket",
+    MARTENSBOOTS = "Martens Boots",
+    MONKTSHIRT = "Monk T-shirt",
+    PUNKHOODIE = "Punk Hoodie",
+    UNDEFINED = "Undefined"
+};
+
+type Price = number;
+
+export const priceListInEuro: Record<allClothesNames, Price> = {
+    [allClothesNames.KINGVAMPPANTS]: 1257,
+    [allClothesNames.PINKPYROPANTS]: 630,
+    [allClothesNames.MEHPANTS]: 790,
+    [allClothesNames.BENOJACKET]: 3450,
+    [allClothesNames.CLASSICJACKET]: 4200,
+    [allClothesNames.BREATHJACKET]: 3200,
+    [allClothesNames.MARTENSBOOTS]: 400,
+    [allClothesNames.MONKTSHIRT]: 200,
+    [allClothesNames.PUNKHOODIE]: 560,
+    [allClothesNames.UNDEFINED]: 0,
+}
+
+export enum genders {
+    MEN = "Men",
+    WOMEN = "Women",
+    UNDEFINED = "Undefined"
+}
+
 export enum brands {
     RICKOWENS = "Rick Owens",
     BALENCIAGA = "Balenciaga",
@@ -37,7 +89,7 @@ export enum pocketCounts {
     UNDEFINED = "Undefined"
 }
 
-export enum Fits {
+export enum fits {
     RELAXED = "Relaxed",
     SLIM = "Slim",
     OVERSIZE = "Oversize",
@@ -57,7 +109,7 @@ export enum closureTypes {
     UNDEFINED = "Undefined"
 }
 
-export enum presenceLaces {
+export enum presencesLaces {
     YES = "Yes",
     NO = "No",
     UNDEFINED = "Undefined"
