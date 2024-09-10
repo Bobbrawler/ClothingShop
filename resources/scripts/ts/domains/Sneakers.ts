@@ -22,7 +22,7 @@ export class Sneakers extends Cloth {
     presenceLaces: presencesLaces = presencesLaces.UNDEFINED,
     soleMaterial: soleMaterials = soleMaterials.UNDEFINED
   ) {
-    super(name,brand,size,color,material,gender);
+    super(name, brand, size, color, material, gender);
     this.presenceLaces = presenceLaces;
     this.soleMaterial = soleMaterial;
   }

@@ -12,7 +12,7 @@ exports.multipliersList = {
     [currencies.DOLLAR]: 1.1,
     [currencies.RUBBLE]: 90,
     [currencies.EURO]: 1,
-    [currencies.UNDEFINED]: 0
+    [currencies.UNDEFINED]: 0,
 };
 var allClothesNames;
 (function (allClothesNames) {
@@ -27,7 +27,6 @@ var allClothesNames;
     allClothesNames["PUNKHOODIE"] = "Punk Hoodie";
     allClothesNames["UNDEFINED"] = "Undefined";
 })(allClothesNames || (exports.allClothesNames = allClothesNames = {}));
-;
 exports.priceListInEuro = {
     [allClothesNames.KINGVAMPPANTS]: 1257,
     [allClothesNames.PINKPYROPANTS]: 630,

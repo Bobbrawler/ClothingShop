@@ -5,7 +5,6 @@ import { materials } from "../utils/constants";
 import { genders } from "../utils/constants";
 import { allClothesNames } from "../utils/constants";
 export class Cloth {
-
   public name: allClothesNames;
   protected brand: brands;
   protected size: sizes;

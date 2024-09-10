@@ -22,7 +22,7 @@ export class Pant extends Cloth {
     fit: fits = fits.UNDEFINED,
     pocketCount: pocketCounts = pocketCounts.UNDEFINED
   ) {
-    super(name,brand,size,color,material,gender);
+    super(name, brand, size, color, material, gender);
     this.fit = fit;
     this.pocketCount = pocketCount;
   }
@@ -48,4 +48,3 @@ export class Pant extends Cloth {
     return `${baseInfo}, Fit: ${this.fit}, Pocket Count: ${this.pocketCount}`;
   }
 }
-
