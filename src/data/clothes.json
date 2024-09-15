@@ -1,0 +1,75 @@
+[
+  {
+    "id": "cloth1",
+    "name": "King Vamp Pants",
+    "price": 1257,
+    "imageSrcIntro": "kingVampPants_01.jpg",
+    "imageSrc2": "kingVampPants_02.jpg",
+    "imageSrc3": "kingVampPants_03.jpg"
+  },
+  {
+    "id": "cloth2",
+    "name": "Pink Pyro Pants",
+    "price": 630,
+    "imageSrcIntro": "pinkPyroPants_01.jpg",
+    "imageSrc2": "pinkPyroPants_02.jpg",
+    "imageSrc3": "pinkPyroPants_03.jpg"
+  },
+  {
+    "id": "cloth3",
+    "name": "Meh Pants",
+    "price": 790,
+    "imageSrcIntro": "mehPants_01.jpg",
+    "imageSrc2": "mehPants_02.jpg",
+    "imageSrc3": "mehPants_03.jpg"
+  },
+  {
+    "id": "cloth4",
+    "name": "Beno Jacket",
+    "price": 3450,
+    "imageSrcIntro": "benoJacket_01.jpg",
+    "imageSrc2": "benoJacket_02.jpg",
+    "imageSrc3": "benoJacket_03.jpg"
+  },
+  {
+    "id": "cloth5",
+    "name": "Classic Jacket",
+    "price": 4200,
+    "imageSrcIntro": "classicJacket_01.jpg",
+    "imageSrc2": "classicJacket_02.jpg",
+    "imageSrc3": "classicJacket_03.jpg"
+  },
+  {
+    "id": "cloth6",
+    "name": "Breath Jacket",
+    "price": 3200,
+    "imageSrcIntro": "breathJacket_01.jpg",
+    "imageSrc2": "breathJacket_02.jpg",
+    "imageSrc3": "breathJacket_03.jpg"
+  },
+  {
+    "id": "cloth7",
+    "name": "Martens Boots",
+    "price": 400,
+    "imageSrcIntro": "martensBoots_01.jpg",
+    "imageSrc2": "martensBoots_02.jpg",
+    "imageSrc3": "martensBoots_03.jpg"
+  },
+  {
+    "id": "cloth8",
+    "name": "Monk T-shirt",
+    "price": 200,
+    "imageSrcIntro": "monkT-shirt_01.jpg",
+    "imageSrc2": "monkT-shirt_02.jpg",
+    "imageSrc3": "monkT-shirt_03.jpg"
+  },
+  {
+    "id": "cloth9",
+    "name": "Punk Hoodie",
+    "price": 560,
+    "imageSrcIntro": "punkHoodie_01.jpg",
+    "imageSrc2": "punkHoodie_02.jpg",
+    "imageSrc3": "punkHoodie_03.jpg"
+  }
+]
+

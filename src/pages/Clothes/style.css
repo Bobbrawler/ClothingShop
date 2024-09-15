@@ -1,0 +1,9 @@
+.active {
+    color: blue;
+}
+
+.inactive {
+    pointer-events: none;
+    color: red;
+    opacity: .3;
+}

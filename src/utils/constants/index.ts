@@ -1,0 +1,1 @@
+export const someConstant: number = 1;
