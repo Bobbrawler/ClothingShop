@@ -7,7 +7,7 @@ const App = () => {
 
   return (
     <BasketContext.Provider value={{basket, setBasket}}>
-      <Router />;
+      <Router />
     </BasketContext.Provider>
   );
 };

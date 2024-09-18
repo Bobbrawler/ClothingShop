@@ -1,14 +1,17 @@
 import { type ReactElement } from "react";
 import NotFoundPage from "../pages/NotFound";
 import HomePage from "../pages/Home";
-import ClothesPage from "../pages/Clothes";
+import ClothesPage from "../pages/ClothInfo";
+import SalePage from "../components/Sale";
+import BasketPage from "../components/BasketPage";
 
-export const enum PagesBasePaths {
-  CLOTHES_INFO = "/clothes/"
-}
+// export const enum PagesBasePaths {
+//   CLOTHES_INFO = "/clothes/"
+// }
 
 export const enum ApplicationPaths {
   HOME = "/",
+  SALE = "/sale",
   BASKET = "/basket",
   CLOTHES_INFO = "/clothes/:itemId",
   NOT_FOUND = "*",
@@ -34,7 +37,12 @@ const applicationRoutes: IApplicationRoute[] = [
   {
     id: "basket",
     path: ApplicationPaths.BASKET,
-    element: <HomePage />,
+    element: <BasketPage />,
+  },
+  {
+    id: "sale",
+    path: ApplicationPaths.SALE,
+    element: <SalePage />
   },
   {
     id: "clothesInfo",

@@ -1,0 +1,27 @@
+.brand-logo-start {
+    width: 200px;
+    transition: 1s;
+    z-index: 3;
+}
+
+.brand-logo-start:hover {
+    z-index: 3;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+.brand-logo-clicked {
+    z-index: 3;
+    width: 200px;
+    cursor: pointer;
+    transition: 1s;
+    transform: scale(1.5);
+}
+
+.brand-logo-container {
+    z-index: 3;
+}
+
+
+
