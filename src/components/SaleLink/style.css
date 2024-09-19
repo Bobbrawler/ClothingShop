@@ -1,30 +1,41 @@
+:root {
+    --link-height: 8vw;
+    --link-width: 8vw;
+    --link-indent: 2%;
+    --link-start-transition: 0.5s;
+    --link-clicked-transition: 1s;
+    --link-z-index: 100;
+    --link-start-size-hover: scale(1.1);
+    --link-clicked-size: scale(1.2);
+}
+
 .sale-link-start {
-    width: 100px;
-    transition: 0.5s;
+    width: var(--link-width);
+    height: var(--link-height);
+    transition: var(--link-start-transition);
     z-index: 3;
 }
 
 .sale-link-start:hover {
     z-index: 3;
     cursor: pointer;
-    transform: scale(1.1);
+    transform: var(--link-start-size-hover);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 
 .sale-link-clicked {
-    width: 100px;
+    width: var(--link-width);
+    height: var(--link-height);
     z-index: 3;
     cursor: pointer;
     transition: 1s;
-    transform: scale(1.35);
+    transform: var(--link-clicked-size);
 }
 
 .sale-link-container {
-    position: absolute;
+    position: fixed;
     left: 2%;
     top: 2%;
+    z-index: 100;
 }
-
-
-

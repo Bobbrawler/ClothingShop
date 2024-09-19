@@ -3,7 +3,8 @@ import { useContext } from "react";
 import { Fragment } from "react";
 import { useState } from "react";
 import SaleLink from "../SaleLink";
-import BrandLogo from "../BrandLogo";
+import MenuLink from "../MenuLink";
+import Intro from "../Intro";
 import { IclothInMeta } from "../../interfaces";
 import { API } from "../../api";
 import BasketContext, { TBasket } from "../../components/BasketContext";
@@ -61,31 +62,36 @@ const BasketPage = () => {
       list.appendChild(listItem);
     }
     list.style.display = "flex";
-    isStyleCart("bag-image-clicked");
     isStyleShoppingList("shopping-list-open");
+    isStyleCart("bag-image-hidden");
   };
 
-  for (const clothId of currentbasket) {
-    let cloth = allClothes.find((cloth) => cloth.id === clothId);
-    if (!cloth) {
-      console.error("ERROR: Cloth not found with ID", clothId);
-      return (
-        <Fragment>
-          <BrandLogo />
-          <div>Error: Some items in your basket are not found.</div>
-        </Fragment>
-      );
+  const countTotalAmount = () => {
+    for (const clothId of currentbasket) {
+      let cloth = allClothes.find((cloth) => cloth.id === clothId);
+      if (!cloth) {
+        console.error("ERROR: Cloth not found with ID", clothId);
+        return (
+          <Fragment>
+            <MenuLink />
+            <div>Error: Some items in your basket are not found.</div>
+          </Fragment>
+        );
+      }
+      totalAmount += Number(cloth.price);
     }
-    totalAmount += Number(cloth.price);
-  }
+  };
+
+  countTotalAmount();
 
   return (
     <Fragment>
-      <BrandLogo />
+      <MenuLink />
       <SaleLink />
+      <Intro />
       <div>
         <img
-          src="/assets/images/common/bagImage.jpg"
+          src="/assets/images/common/bagImage.png"
           alt="basket image"
           className={styleCart}
           onClick={showClothInCart}

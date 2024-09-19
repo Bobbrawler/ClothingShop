@@ -3,15 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { ApplicationPaths } from "../../router/routes";
 import "./style.css";
 const SaleLink = (): ReactElement => {
-
   const [activeClass, setActiveClass] = useState("sale-link-start");
 
   const handleClick = () => {
     setActiveClass("sale-link-clicked");
     setTimeout(() => {
       navigate(ApplicationPaths.SALE);
-    }, 1000)
-  }
+    }, 1000);
+  };
 
   const navigate = useNavigate();
   return (

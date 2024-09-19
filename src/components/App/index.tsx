@@ -6,7 +6,7 @@ const App = () => {
   const [basket, setBasket] = useState<TBasket>([] as TBasket);
 
   return (
-    <BasketContext.Provider value={{basket, setBasket}}>
+    <BasketContext.Provider value={{ basket, setBasket }}>
       <Router />
     </BasketContext.Provider>
   );

@@ -1,12 +1,11 @@
-import { type ReactElement, Fragment, memo, useState } from "react";
+import { type ReactElement, Fragment, memo } from "react";
 import { useNavigate } from "react-router-dom";
-import BrandLogo from "../BrandLogo";
+import MenuLink from "../MenuLink";
 import "./style.css";
 import { API } from "../../api";
 import { IclothInMeta } from "../../interfaces";
-import { ApplicationPaths } from "../../router/routes";
 import BasketLink from "../BasketLink";
-
+import Intro from "../Intro";
 export interface IclothInMetaProps {
   allClothes: IclothInMeta[];
 }
@@ -14,14 +13,6 @@ export interface IclothInMetaProps {
 const SalePage = (): ReactElement => {
   const navigate = useNavigate();
   const allClothes: IclothInMeta[] = API.getAllClothes();
-  const [activeClass, setActiveClass] = useState("bag-image-start");
-
-  const clickToBasketPage = () => {
-    setActiveClass("bag-image-clicked");
-    setTimeout(() => {
-      navigate(ApplicationPaths.BASKET);
-    },1000)
-  }
 
   const handleClick = (
     event: React.MouseEvent<HTMLDivElement>,
@@ -32,7 +23,7 @@ const SalePage = (): ReactElement => {
       ".sale-list-element-image-container"
     ) as HTMLElement;
     if (!container) {
-      console.log("ERROR CONTAINER NOT FOUND");
+      console.error("ERROR: container with image of sale list element not found.");
       return;
     }
     container.style.transform = "scale(1.1)";
@@ -69,12 +60,12 @@ const SalePage = (): ReactElement => {
 
   return (
     <Fragment>
-      <BrandLogo />
+      <MenuLink />
       <BasketLink />
+      <Intro />
       <div className="product-grid">
         <ProductGridList allClothes={allClothes} />
       </div>
-
     </Fragment>
   );
 };

@@ -1,8 +1,9 @@
 import { type ReactElement, Fragment, memo } from "react";
 import { useNavigate } from "react-router-dom";
 import { ApplicationPaths } from "../../router/routes";
-import BrandLogo from "../BrandLogo";
+import MenuLink from "../MenuLink";
 import "./style.css";
+import Intro from "../Intro";
 
 export interface IMenuItem {
   id: string;
@@ -18,26 +19,6 @@ export interface IMenuItemsProps {
 const HomeMenu = (): ReactElement => {
   const navigate = useNavigate();
 
-  const handleClick = (
-    event: React.MouseEvent<HTMLDivElement>,
-    link: string
-  ) => {
-    const target = event.currentTarget as HTMLElement;
-    console.log(target);
-    const image = target.querySelector(
-      ".navigator-menu-image-start"
-    ) as HTMLElement;
-    if (!image) {
-      console.log("ERROR IMAGE NOT FOUND");
-      return;
-    }
-    image.style.transform = "scale(1.5)";
-    target.style.opacity = "0";
-    setTimeout(() => {
-      navigate(link);
-    }, 1000);
-  };
-
   const menuItems: IMenuItem[] = [
     {
       id: "sale",
@@ -52,6 +33,25 @@ const HomeMenu = (): ReactElement => {
       imageSrc: "/assets/images/common/startBasketImage.jpg",
     },
   ];
+
+  const handleClick = (
+    event: React.MouseEvent<HTMLDivElement>,
+    link: string
+  ) => {
+    const target = event.currentTarget as HTMLElement;
+    const image = target.querySelector(
+      ".navigator-menu-image-start"
+    ) as HTMLElement;
+    if (!image) {
+      console.error("ERROR: navigate image not found.");
+      return;
+    }
+    image.style.transform = "scale(1.5)";
+    target.style.opacity = "0";
+    setTimeout(() => {
+      navigate(link);
+    }, 1000);
+  };
 
   const MenuItemsList = memo(({ menuItems }: IMenuItemsProps): ReactElement => {
     return (
@@ -72,31 +72,14 @@ const HomeMenu = (): ReactElement => {
             </div>
           ))}
         </div>
-        
-        <div className="intro-content">
-          <div>
-            <img
-              src="/assets/images/common/introOne.jpg"
-              alt="intro"
-              className="intro-one"
-            />
-          </div>
-          <div
-          >
-            <img
-              src="/assets/images/common/introTwo.jpg"
-              alt="intro"
-              className="intro-two"
-            />
-          </div>
-        </div>
       </Fragment>
     );
   });
 
   return (
     <Fragment>
-      <BrandLogo />
+      <MenuLink />
+      <Intro />
       <MenuItemsList menuItems={menuItems} />
     </Fragment>
   );

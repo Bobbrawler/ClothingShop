@@ -5,10 +5,6 @@ import ClothesPage from "../pages/ClothInfo";
 import SalePage from "../components/Sale";
 import BasketPage from "../components/BasketPage";
 
-// export const enum PagesBasePaths {
-//   CLOTHES_INFO = "/clothes/"
-// }
-
 export const enum ApplicationPaths {
   HOME = "/",
   SALE = "/sale",
@@ -42,13 +38,13 @@ const applicationRoutes: IApplicationRoute[] = [
   {
     id: "sale",
     path: ApplicationPaths.SALE,
-    element: <SalePage />
+    element: <SalePage />,
   },
   {
     id: "clothesInfo",
     path: ApplicationPaths.CLOTHES_INFO,
-    element: <ClothesPage />
-  }
+    element: <ClothesPage />,
+  },
 ];
 
 export default applicationRoutes;

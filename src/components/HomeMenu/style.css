@@ -1,78 +1,21 @@
 @font-face {
-    font-family: 'MainFont'; /* Название шрифта */
-    src: url('/public/fonts/DancingScript-VariableFont_wght.ttf') format('truetype'); /* Убедитесь, что пути верны */
+    font-family: 'MainFont';
+    src: url('/public/fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
+:root {
+    --image-link-width: 25vw;
+    --body-font-size: 1.6vw;
+}
+
 body {
     font-family: "MainFont";
-    font-size: 20px;
+    font-size: var(--body-font-size)
 }
-  
-  .image {
-    transition: 1s;
-  }
-  
-  .start-navigator {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      gap: 40px;
-      z-index: 50;
-  }
-  
-  .navigator-image-container {
-      position: relative;
-      width: 400px;
-      height: 400px;
-      transition: 1s;
-  }
-  
-  .navigator-menu-image-start {
-      z-index: 50;
-      height: 400px;
-      width: 400px;
-      transition: 1s;
-  }
 
-  /* .navigator-menu-image-clicked {
-      height: 400px;
-      width: 400px;
-      transition: 1s;
-      transform: scale(1.5);
-  } */
-
-
-  
-  .overlay-menu {
-      position: absolute;
-      background-color: rgb(255, 255, 255,0.5);
-      opacity: 0;
-      left: 0;
-      right: 0;
-      transition: opacity 1s;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: black;
-      width: 100%;
-      height: 100%;
-      font-size: 18px;
-      font-weight: bold;
-      z-index: 100;
-  }
-  
-  .navigator-image-container:hover .overlay-menu {
-      opacity: 1;
-      cursor: pointer;
-  }
-  
-  .navigator-image-container:hover .navigator-menu-image {
-      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-  }
-
-  .container {
+.container {
     position: relative;
     display: flex;
     align-items: center;
@@ -80,42 +23,57 @@ body {
     gap: 20px;
     flex-direction: column;
 }
- 
- .intro-content {
-    position: absolute;
-    top: 0%;
+
+
+.image {
+    transition: 1s;
+}
+
+.start-navigator {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap: 250px;
-    z-index: 1;
+    gap: 40px;
+    z-index: 50;
+}
+
+.navigator-image-container {
+    position: relative;
+    width: var(--image-link-width);
+    height: var(--image-link-width);
+    transition: 1s;
+}
+
+.navigator-menu-image-start {
+    z-index: 50;
+    height: var(--image-link-width);
+    width: var(--image-link-width);
+    transition: 1s;
+}
+
+.overlay-menu {
+    position: absolute;
+    background-color: rgb(255, 255, 255, 0.5);
+    opacity: 0;
+    left: 0;
+    right: 0;
+    transition: opacity 1s;
+    display: flex;
+    justify-content: center;
     align-items: center;
- }
+    color: black;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 100;
+}
 
- .intro-one {
-    margin: 0 50px 0 50px;
-    opacity: 0.3;
-    width: 600px;
-    
- }
- .intro-two {
-    margin: 0 50px 0 50px;
-    opacity: 0.3;
-    width: 500px;
-    
-   
- }
+.navigator-image-container:hover .overlay-menu {
+    opacity: 1;
+    cursor: pointer;
+}
 
-
-  
-  
- 
-  
-  
-  
-  
-  
-  
-  
-  
-  
+.navigator-image-container:hover .navigator-menu-image {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}

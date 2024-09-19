@@ -1,7 +1,12 @@
+:root {
+    --grid-list-settings: repeat(3, minmax(200px, 1fr));
+    --list-item-size: 75vh;
+}
+
 .product-grid {
-    z-index: 100;
+    z-index: 99;
     display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-columns: var(--grid-list-settings);
     gap: 16px;
     padding: 16px;
 }
@@ -22,14 +27,10 @@
 }
 
 .sale-list-item img {
-    height: 400px;
+    height: var(--list-item-size);
     position: relative;
 }
 
-.sale-list-item img {
-    height: 400px;
-    position: relative;
-}
 
 .sale-list-item:hover .overlay-menu {
     opacity: 1;
@@ -41,7 +42,7 @@
 
 .overlay-menu {
     position: absolute;
-    background-color: rgb(255, 255, 255,0.5);
+    background-color: rgb(255, 255, 255, 0.5);
     opacity: 0;
     transition: opacity 1s;
     display: flex;
@@ -52,7 +53,5 @@
     height: 100%;
     font-size: 18px;
     font-weight: bold;
-    z-index: 100;
+    z-index: 99;
 }
-
-

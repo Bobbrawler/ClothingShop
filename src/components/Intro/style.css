@@ -1,0 +1,40 @@
+:root {
+    --image-intro-width: 35vw;
+    --image-intro-opacity: 0.3;
+    --image-intro-transition: 6s;
+    --image-intro-position: relative;
+    --image-intro-margin: 0 50px 0 50px;
+    --intro-z-index: -2;
+}
+
+.intro-content {
+    position: fixed;
+    top: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 20px;
+    margin-top: 5vw;
+    z-index: var(--intro-z-index);
+    align-items: center;
+}
+
+.intro-one {
+    transition: var(--image-intro-transition);
+    position: var(--image-intro-position);
+    margin: var(--image-intro-margin);
+    opacity: var(--image-intro-opacity);
+    width: var(--image-intro-width);
+    z-index: var(--intro-z-index);
+
+}
+
+.intro-two {
+    transition: var(--image-intro-transition);
+    position: var(--image-intro-position);
+    margin: var(--image-intro-margin);
+    opacity: var(--image-intro-opacity);
+    width: var(--image-intro-width);
+    z-index: var(--intro-z-index);
+
+}

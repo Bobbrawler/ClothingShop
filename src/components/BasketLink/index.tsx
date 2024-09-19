@@ -17,7 +17,7 @@ const BasketLink = (): ReactElement => {
     <div className="basket-link-container">
       <img
         className={activeClass}
-        src="/assets/images/common/bagImage.jpg"
+        src="/assets/images/common/startBasketImage.jpg"
         alt="logo"
         onClick={handleClick}
       />
