@@ -5,6 +5,7 @@ import "./style.css";
 import { API } from "../../api";
 import { IclothInMeta } from "../../interfaces";
 import { ApplicationPaths } from "../../router/routes";
+import BasketLink from "../BasketLink";
 
 export interface IclothInMetaProps {
   allClothes: IclothInMeta[];
@@ -69,21 +70,11 @@ const SalePage = (): ReactElement => {
   return (
     <Fragment>
       <BrandLogo />
-
+      <BasketLink />
       <div className="product-grid">
         <ProductGridList allClothes={allClothes} />
       </div>
 
-      <div
-      className="bag-container"
-      >
-        <img 
-        src="/assets/images/common/bagImage.jpg" 
-        alt="basket image"
-        className={activeClass}
-        onClick={clickToBasketPage}
-        />
-      </div>
     </Fragment>
   );
 };

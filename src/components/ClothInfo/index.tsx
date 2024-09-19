@@ -1,13 +1,14 @@
 import React, { ReactElement, useRef, useEffect, useContext, useState } from "react";
 import { Fragment } from "react";
 import BrandLogo from "../BrandLogo";
+import BasketLink from "../BasketLink";
 import "./style.css";
 import { IclothInMeta } from "../../interfaces";
 import { API } from "../../api";
 import { ApplicationPaths } from "../../router/routes";
 import { useNavigate, useParams } from "react-router-dom";
 import BasketContext, { TBasket } from "../../components/BasketContext";
-
+import SaleLink from "../SaleLink";
 const ClothInfo = (): ReactElement => {
   const navigate = useNavigate();
   const { basket, setBasket } = useContext(BasketContext);
@@ -42,7 +43,7 @@ const ClothInfo = (): ReactElement => {
     rowContainer.current.style.opacity = "0";
     infoContainer.current.style.opacity = "0";
     slideButton.current.style.opacity = "0";
-    addCartContainer.current.style.bottom = "450px";
+    addCartContainer.current.style.bottom = "350px";
     addCartImage.current.style.transform = "scale(4)";
     const currentbasket: TBasket = [...basket];
     currentbasket.push(selectClothId)
@@ -60,6 +61,8 @@ const ClothInfo = (): ReactElement => {
   return (
     <Fragment>
       <BrandLogo />
+      <SaleLink />
+      <BasketLink />
       {selectCloth ? (
         <div>
           <div>

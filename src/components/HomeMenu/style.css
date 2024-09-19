@@ -1,7 +1,14 @@
+@font-face {
+    font-family: 'MainFont'; /* Название шрифта */
+    src: url('/public/fonts/DancingScript-VariableFont_wght.ttf') format('truetype'); /* Убедитесь, что пути верны */
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    font-family: "Dancing Script", cursive;
+    font-family: "MainFont";
     font-size: 20px;
-  }
+}
   
   .image {
     transition: 1s;
