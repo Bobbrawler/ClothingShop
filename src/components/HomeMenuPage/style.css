@@ -14,17 +14,3 @@ body {
     font-size: var(--body-font-size);
 }
 
-.container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    flex-direction: column;
-}
-
-
-.image {
-    transition: 1s;
-}
-

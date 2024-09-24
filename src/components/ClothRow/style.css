@@ -1,0 +1,29 @@
+.row-container {
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: var(--row-image-width);
+    overflow: hidden;
+    position: relative;
+    transition: 1s;
+}
+
+
+.images-row-container {
+    position: relative;
+    left: var(--row-image-width);
+    display: flex;
+    transition: transform 2s ease;
+}
+
+.images-row-container img {
+    width: var(--row-image-width);
+    height: auto;
+}
+
+.images-row-container {
+    position: relative;
+    display: flex;
+    transition: 1s ease;
+}

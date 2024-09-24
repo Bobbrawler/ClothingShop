@@ -1,0 +1,30 @@
+:root {
+    --additional-info-add-cloth-transition: 0.5s;
+}
+
+.additional-info-add-cloth {
+    padding: 0.8vw;
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition: var(--additional-info-add-cloth-transition);
+}
+
+.additional-info-add-cloth:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.additional-info-image {
+    width: 5vw;
+
+}
+
+.additional-info-count {
+    font-size: 2.5vw;
+}

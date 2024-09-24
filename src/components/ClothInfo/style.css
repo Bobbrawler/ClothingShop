@@ -1,0 +1,24 @@
+:root {
+    --cloth-info-container-background-color: white;
+    --cloth-info-container-font-size: 3vw;
+}
+
+
+.cloth-info-container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 1s;
+    padding: 2vw;
+    gap: 2vh;
+    align-items: center;
+    font-size: var(--cloth-info-container-font-size);
+    background-color: var(--cloth-info-container-background-color);
+}
+
+.cloth-info-container:hover {
+    transform: scale(1.1);
+    box-shadow: 16px 16px 30px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}

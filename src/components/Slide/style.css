@@ -1,0 +1,9 @@
+.slide-button {
+    cursor: pointer;
+    width: var(--slide-button-size);
+    transition: 1s;
+}
+
+.slide-button:hover {
+    transform: scale(1.1);
+}

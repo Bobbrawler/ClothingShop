@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Router from "../../router/router";
 import BasketContext, { TBasket } from "../BasketContext";
-
+import "./style.css";
 const App = () => {
   const [basket, setBasket] = useState<TBasket>([] as TBasket);
 

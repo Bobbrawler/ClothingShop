@@ -1,0 +1,36 @@
+:root {
+    --add-cart-transition: 0.3s;
+}
+
+.add-cart-container {
+    position: absolute;
+    right: 1vw;
+    bottom: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.add-cloth-button-start {
+    width: var(--add-cloth-button-size);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--add-cart-transition);
+}
+
+.add-cloth-button-start:hover {
+    transform: scale(1.2);
+}
+
+.add-cloth-button-clicked {
+    width: var(--add-cloth-button-size);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--add-cart-transition);
+    transform: scale(1.5);
+}
