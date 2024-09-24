@@ -15,7 +15,7 @@ import { API } from "../../api";
 import { useParams } from "react-router-dom";
 import BasketContext, { TBasket } from "../BasketContext";
 import SaleLink from "../SaleLink";
-
+// вававвавав
 export interface IAdditionalInfoProps {
   cloth: IclothInMeta;
 }
