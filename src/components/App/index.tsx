@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Router from "../../router";
+import Router from "../../router/router";
 import BasketContext, { TBasket } from "../BasketContext";
 
 const App = () => {

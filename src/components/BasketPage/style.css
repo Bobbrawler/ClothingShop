@@ -47,7 +47,7 @@
 .total-amount-container:hover {
     transform: scale(1.05);
     cursor: pointer;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.5);
 }
 
 .checkout-button {
@@ -115,5 +115,5 @@
 .list-item-container:hover {
     transform: scale(1.05);
     cursor: pointer;
-    box-shadow: 4px 4px 10px rgba(69, 66, 66, 0.5);
+    box-shadow: 20px 20px 40px rgba(69, 66, 66, 0.5);
 }

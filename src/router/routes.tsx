@@ -1,8 +1,8 @@
 import { type ReactElement } from "react";
 import NotFoundPage from "../pages/NotFound";
-import HomePage from "../pages/Home";
-import ClothesPage from "../pages/ClothInfo";
-import SalePage from "../components/Sale";
+import HomePage from "../components/HomeMenuPage";
+import ClothesPage from "../components/ClothInfoPage";
+import SalePage from "../components/SalePage";
 import BasketPage from "../components/BasketPage";
 
 export const enum ApplicationPaths {

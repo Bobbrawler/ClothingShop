@@ -12,7 +12,7 @@ export interface IclothInMetaProps {
 
 const SalePage = (): ReactElement => {
   const navigate = useNavigate();
-  const allClothes: IclothInMeta[] = API.getAllClothes();
+  const allClothes: IclothInMeta[] = API.getAllClothes(); //TODO useCallback
 
   const handleClick = (
     event: React.MouseEvent<HTMLDivElement>,
@@ -23,7 +23,9 @@ const SalePage = (): ReactElement => {
       ".sale-list-element-image-container"
     ) as HTMLElement;
     if (!container) {
-      console.error("ERROR: container with image of sale list element not found.");
+      console.error(
+        "ERROR: container with image of sale list element not found."
+      );
       return;
     }
     container.style.transform = "scale(1.1)";
@@ -33,29 +35,28 @@ const SalePage = (): ReactElement => {
   };
 
   const ProductGridList = memo(
-    ({ allClothes }: IclothInMetaProps): ReactElement => {
-      return (
-        <Fragment>
-          {allClothes.map((cloth: IclothInMeta) => (
-            <div
-              className="sale-list-item"
-              key={cloth.id}
-              onClick={(event) => handleClick(event, cloth)}
-            >
-              <div className="sale-list-element-image-container">
-                <div className="overlay-menu"></div>
-                <img
-                  src={`/assets/images/clothing/${cloth.imageSrcIntro}`}
-                  alt={`cloth: ${cloth.name}`}
-                />
-              </div>
-              <div>{cloth.name}</div>
-              <div>{`${cloth.price} €`}</div>
+    ({ allClothes }: IclothInMetaProps): ReactElement => (
+      <Fragment>
+        {allClothes.map((cloth: IclothInMeta) => (
+          <div
+            className="sale-list-item"
+            key={cloth.id}
+            onClick={(event) => handleClick(event, cloth)}
+          >
+            <div className="sale-list-element-image-container">
+              <div className="overlay-menu"></div>
+              <img
+                src={`/assets/images/clothing/${cloth.imageSrcIntro}`}
+                //TODO full image path
+                alt={`cloth: ${cloth.name}`}
+              />
             </div>
-          ))}
-        </Fragment>
-      );
-    }
+            <div>{cloth.name}</div>
+            <div>{`${cloth.price} €`}</div>
+          </div>
+        ))}
+      </Fragment>
+    )
   );
 
   return (

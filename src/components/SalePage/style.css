@@ -1,6 +1,6 @@
 :root {
     --grid-list-settings: repeat(3, minmax(200px, 1fr));
-    --list-item-size: 75vh;
+    --list-item-size: 70vh;
 }
 
 .product-grid {

@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'MainFont';
+    src: url('/public/fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --body-font-size: 1.6vw;
+}
+
+body {
+    font-family: "MainFont";
+    font-size: var(--body-font-size);
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: column;
+}
+
+
+.image {
+    transition: 1s;
+}
+

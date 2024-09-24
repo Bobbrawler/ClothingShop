@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import ClothInfo from "../../components/ClothInfo";
+import ClothInfo from "../../components/ClothInfoPage";
 
 const ClothInfoPage = (): ReactElement => {
   return <ClothInfo />;

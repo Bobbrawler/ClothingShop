@@ -1,32 +1,6 @@
-@font-face {
-    font-family: 'MainFont';
-    src: url('/public/fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 :root {
     --image-link-width: 25vw;
-    --body-font-size: 1.6vw;
-}
-
-body {
-    font-family: "MainFont";
-    font-size: var(--body-font-size)
-}
-
-.container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    flex-direction: column;
-}
-
-
-.image {
-    transition: 1s;
+    --transition-all: 1s;
 }
 
 .start-navigator {
@@ -37,19 +11,37 @@ body {
     z-index: 50;
 }
 
-.navigator-image-container {
+.navigator-image-container-start {
     position: relative;
     width: var(--image-link-width);
     height: var(--image-link-width);
-    transition: 1s;
+    transition: var(--transition-all);
 }
 
-.navigator-menu-image-start {
+.navigator-image-container-clicked {
+    position: relative;
+    width: var(--image-link-width);
+    height: var(--image-link-width);
+    transition: var(--transition-all);
+    opacity: 0;
+}
+
+.navigator-image-container-clicked img {
     z-index: 50;
     height: var(--image-link-width);
     width: var(--image-link-width);
-    transition: 1s;
+    transition: var(--transition-all);
+    transform: scale(1.5);
 }
+
+.navigator-menu-image {
+    z-index: 50;
+    height: var(--image-link-width);
+    width: var(--image-link-width);
+    transition: var(--transition-all);
+}
+
+
 
 .overlay-menu {
     position: absolute;
@@ -57,7 +49,7 @@ body {
     opacity: 0;
     left: 0;
     right: 0;
-    transition: opacity 1s;
+    transition: opacity var(--transition-all);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,11 +61,11 @@ body {
     z-index: 100;
 }
 
-.navigator-image-container:hover .overlay-menu {
+.navigator-image-container-start:hover .overlay-menu {
     opacity: 1;
     cursor: pointer;
 }
 
-.navigator-image-container:hover .navigator-menu-image {
+.navigator-image-container-start:hover .navigator-menu-image {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }

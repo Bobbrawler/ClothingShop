@@ -26,6 +26,8 @@
     opacity: var(--image-intro-opacity);
     width: var(--image-intro-width);
     z-index: var(--intro-z-index);
+    box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.5);
+    border: 2px rgb(84, 74, 74) solid;
 
 }
 
@@ -36,5 +38,7 @@
     opacity: var(--image-intro-opacity);
     width: var(--image-intro-width);
     z-index: var(--intro-z-index);
+    box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.5);
+    border: 2px rgb(84, 74, 74) solid;
 
 }
