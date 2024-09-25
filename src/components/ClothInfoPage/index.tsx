@@ -17,13 +17,23 @@ export interface IAdditionalInfoProps {
   cloth: IclothInMeta;
 }
 const ClothInfoPage = (): ReactElement => {
-  const [addCartClass, setAddCartClass] = useState<string>("add-cloth-button-start");
-  const [countClothes, setCountClothes] = useState<number>(0);
+  const [addCartClass, setAddCartClass] = useState<string>(
+    "add-cloth-button-start"
+  );
+  const [additionalInfoClass, setAdditionalInfoClas] = useState<string>(
+    "additional-info-add-cloth-start"
+  );
   const { basket, setBasket } = useContext(BasketContext);
   const { itemId: selectClothId } = useParams();
   const allClothes: IclothInMeta[] = API.getAllClothes();
-  const selectCloth = allClothes.find((cloth) => cloth.id === selectClothId);
+  const selectCloth = allClothes.find((cloth) => cloth.id === selectClothId)!;
   const addCartTransition: number = 300;
+  const additionalInfoTransition: number = 1000;
+  const currentbasket: TBasket = [...basket];
+  let countSelectCloth: number = currentbasket.filter(
+    (clothId) => clothId === selectCloth.id
+  ).length;
+  const [countClothes, setCountClothes] = useState<number>(countSelectCloth);
 
   const addClothToCart = () => {
     if (!selectCloth) {
@@ -31,13 +41,17 @@ const ClothInfoPage = (): ReactElement => {
       return;
     }
     setAddCartClass("add-cloth-button-clicked");
+    setAdditionalInfoClas("additional-info-add-cloth-active");
+    setTimeout(() => {
+      setAdditionalInfoClas("additional-info-add-cloth-start");
+    }, additionalInfoTransition);
     setTimeout(() => {
       setAddCartClass("add-cloth-button-start");
-    },addCartTransition)
+    }, addCartTransition);
     const currentbasket: TBasket = [...basket];
     currentbasket.push(selectCloth.id);
     setBasket(currentbasket);
-    setCountClothes(prevCount => prevCount + 1)
+    setCountClothes((prevCount) => prevCount + 1);
   };
 
   return !selectCloth ? (
@@ -51,13 +65,19 @@ const ClothInfoPage = (): ReactElement => {
         <ClothInfo selectCloth={selectCloth} />
         <ClothRow selectCloth={selectCloth} />
       </div>
-      <AdditionalInfoAddCloth imageSrc={selectCloth.imageSrcIntro} countClothes={countClothes}/>
-      <AddCloth
-        addCartClass={addCartClass}
-        addClothToCart={() => {
-          addClothToCart();
-        }}
-      />
+      <div className="add-container">
+        <AdditionalInfoAddCloth
+          clothName={selectCloth.name}
+          countClothes={countClothes}
+          style={additionalInfoClass}
+        />
+        <AddCloth
+          addCartClass={addCartClass}
+          addClothToCart={() => {
+            addClothToCart();
+          }}
+        />
+      </div>
       <Intro />
     </Fragment>
   );

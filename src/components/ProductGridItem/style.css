@@ -1,0 +1,50 @@
+.sale-list-element-image-container-start {
+    position: relative;
+    transition: 1s;
+}
+
+.sale-list-element-image-container-clicked {
+    position: relative;
+    transition: 1s;
+    transform: scale(1.1);
+}
+
+.sale-list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.sale-list-item img {
+    height: var(--list-item-size);
+    position: relative;
+}
+
+
+.sale-list-item:hover .overlay-menu {
+    opacity: 1;
+}
+
+.sale-list-item:hover {
+    cursor: pointer;
+}
+
+.overlay-menu {
+    position: absolute;
+    background-color: rgb(255, 255, 255, 0.5);
+    opacity: 0;
+    transition: opacity 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 99;
+}

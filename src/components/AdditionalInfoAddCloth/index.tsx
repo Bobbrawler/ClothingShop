@@ -1,24 +1,19 @@
 import { ReactElement } from "react";
 import "./style.css";
 export interface IAdditionalInfoAddClothProps {
-    imageSrc: string;
+    clothName: string;
     countClothes: number;
+    style: string;
 }
 
-const AdditionalInfoAddCloth = ({imageSrc, countClothes}: IAdditionalInfoAddClothProps): ReactElement => (
+const AdditionalInfoAddCloth = ({clothName, countClothes, style}: IAdditionalInfoAddClothProps): ReactElement => (
     <div 
-    className="additional-info-add-cloth">
-        <img
-        className="additional-info-image" 
-        src={`/assets/images/clothing/${imageSrc}`} 
-        alt="" 
-        />
+    className={style}>
         <div
         className="additional-info-count"
         >
-        {countClothes}
+        `{countClothes} {clothName} added to cart`
         </div>
-
     </div>
 )
 

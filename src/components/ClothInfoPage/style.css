@@ -14,5 +14,16 @@
     gap: 5vw;
 }
 
+.add-container {
+    position: absolute;
+    right: 0vw;
+    bottom: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4vh;
+    align-items: center;
+}
+
 
 
