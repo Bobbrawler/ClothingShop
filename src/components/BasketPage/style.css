@@ -29,44 +29,6 @@
     display: none;
 }
 
-.total-amount-container {
-    position: fixed;
-    padding: 2vw;
-    font-size: var(--total-amount-container-font-size);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    transition: var(--transition-duration);
-    gap: 1vh;
-    align-items: end;
-    right: 2vw;
-    top: 2vh;
-    font-weight: 100;
-}
-
-.total-amount-container:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-    box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.5);
-}
-
-.checkout-button {
-    padding: 2vh 5vw;
-    background-color: var(--background-color-checkout-button-default);
-    color: var(--checkout-button-font-color);
-    transition: 2s;
-}
-
-.checkout-button:hover {
-    background-color: var(--background-color-checkout-button-hover);
-    cursor: pointer;
-}
-
-.total-amount {
-    font-size: var(--total-amount-font-size);
-    font-weight: bold;
-}
-
 .shopping-list-start {
     transition: var(--transition-duration);
     display: none;

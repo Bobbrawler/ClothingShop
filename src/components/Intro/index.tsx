@@ -24,6 +24,7 @@ const Intro = (): ReactElement => {
 
   const introLocation = () => {
     setTimeout(() => {
+      console.log(allIntros)
       let oneImage = introOne.current;
       let twoImage = introTwo.current;
       if (!oneImage || !twoImage) {
